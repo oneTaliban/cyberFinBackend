@@ -38,7 +38,7 @@ class TaskViewset(viewsets.ModelViewSet):
 
         priority_breakdown = user_tasks.values('priority').annotate(
             count=Count('id')
-        ).order_by('prority')
+        ).order_by('priority')
 
         data = {
             'total_tasks': total_tasks,
